@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import ScrollList from './Components/ScrollList';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ScrollList heading={"Trending Songs"} column={5} song = {1}/>
+        <div className='smaller-scroll'>
+            <div className="rel" >
+              <ScrollList heading={"Just Released"} column={2} song={2}/>
+            </div>
+            <div className = "recom">
+              <ScrollList heading={"Recommended Artist"} column={1} song={3}/> 
+
+            </div>
+        </div>
+        
     </div>
   );
 }
