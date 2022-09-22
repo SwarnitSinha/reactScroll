@@ -18,9 +18,9 @@ function Cards(props) {
     // console.log(value)
    
   return (
-    <div >
+    <div className='card'>
         <img className="thumbnailImg" src ={props.src}/>
-        <h3>{props.title}</h3>
+        <h3 className='title'>{props.title}</h3>
     </div>
   )
 }
